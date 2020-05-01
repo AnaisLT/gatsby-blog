@@ -1,5 +1,5 @@
 backend:
-  name: gatsby-blog
+  name: github
   repo: AnaisLT/gatsby-blog
   
 media_folder: static/assets
