@@ -6,9 +6,10 @@ media_folder: static/assets
 public_folder: assets
   
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: "posts"
+    label: Posts
+    folder: "src/pages/posts"
+    description: "Blog posts about sustainability, health and fitness, healthy eating..."
     create: true
     fields:
       - { name: path, label: Path }
