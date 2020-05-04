@@ -4,6 +4,9 @@ date: 2020-05-03
 author: 'Anais'
 path: '/third-post'
 image: ../../images/mabu.jpg
+tags:
+- sustainability
+- health
 ---
 
 Today we will explore what health really is. Today we will explore what health really is.
