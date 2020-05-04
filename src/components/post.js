@@ -1,10 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Card, CardTitle, CardText, CardSubtitle, CardBody } from "reactstrap"
+import Image from "gatsby-image"
 
-const Post = ({ title, author, path, date, body }) => {
+const Post = ({ title, author, path, date, body, fluid }) => {
     return (
         <Card>
+            <Link to={path}>
+                <Image className="card-image-top" fluid={fluid} />
+            </Link>
             <CardBody>
                 <CardTitle>
                     {title}
