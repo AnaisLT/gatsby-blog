@@ -18,13 +18,15 @@ const IndexPage = () => (
           return (
             <div>
               {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Post title={node.frontmatter.title}
-                      author={node.frontmatter.author}
-                      path={node.frontmatter.path}
-                      date={node.frontmatter.date}
-                      body={node.frontmatter.body}
-                      fluid={node.frontmatter.image.childImageSharp.fluid}
-                      tags={node.frontmatter.tags}
+                <Post 
+                  key={node.id}
+                  title={node.frontmatter.title}
+                  author={node.frontmatter.author}
+                  slug={node.fields.slug}
+                  date={node.frontmatter.date}
+                  body={node.frontmatter.body}
+                  fluid={node.frontmatter.image.childImageSharp.fluid}
+                  tags={node.frontmatter.tags}
                 />
               ))}
           </div>
@@ -49,7 +51,6 @@ query {
           title
           date(formatString: "Do MM YYYY")
           author
-          path
           tags
           image{
             childImageSharp{
@@ -58,6 +59,9 @@ query {
               }
             }
           }
+        }
+        fields {
+          slug
         }
         excerpt
       }

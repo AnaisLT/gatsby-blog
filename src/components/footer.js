@@ -19,7 +19,7 @@ const Footer= () => (
                         href="https://www.instagram.com"
                         className="instagram"
                     >
-                        <i className="fab fa-instagram-f fa-2x" />
+                        <i className="fab fa-instagram fa-2x" />
                     </a>
                 </li>
             </ul>
