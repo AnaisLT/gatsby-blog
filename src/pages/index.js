@@ -3,16 +3,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, StaticQuery } from "gatsby"
 import Post from "../components/post"
-import { Row, Col } from "reactstrap"
-import Sidebar from "../components/sidebar"
 
 const IndexPage = () => (
-  <Layout>
+  <Layout pageTitle="Urban Rewilding">
     <SEO title="Home" keywords={(`gatsby`, `application`, `react`)} />
-    <h1>Homepage</h1>
-    <Row>
-      <Col md="8">
-        <StaticQuery 
+      <StaticQuery 
         query={indexQuery} 
         render={data => {
           return (
@@ -33,11 +28,6 @@ const IndexPage = () => (
               )
             }}
           />
-      </Col>
-      <Col md="4">
-        <Sidebar></Sidebar>
-      </Col>
-    </Row>
   </Layout>
 )
 
