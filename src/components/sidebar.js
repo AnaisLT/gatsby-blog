@@ -1,10 +1,42 @@
 import React from "react"
-import { Card, CardTitle, CardBody, Form, FormGroup, Input } from "reactstrap"
+import { Card, CardBody, CardText, CardTitle, Form, FormGroup, Input } from "reactstrap"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Image from "gatsby-image"
 
-const Sidebar = () => (
+const Sidebar = ({ author, authorFluid }) => (
     <div>
+        {author && (
+            <Card>
+                <Image className="card-image-top" fluid={authorFluid}/>
+                <CardBody>
+                    <CardTitle className="text-center text-uppercase mb-3">
+                        {author.name}
+                    </CardTitle>
+                    <CardText>{author.bio}</CardText>
+                    <div className="author-social-links text-center">
+                        <ul>
+                            <li>
+                                <a 
+                                    href={author.facebook} 
+                                    target="_blank" rel="noopener noreferrer" 
+                                    className="facebook">
+                                        <i className="fab fa-facebook-f fa-lg"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a 
+                                    href={author.linkedin} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    lassName="linkedin">
+                                        <i className="fab fa-linkedin fa-lg"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </CardBody>
+            </Card>
+        )}
         <Card>
             <CardBody>
                 <CardTitle className="text-center text-uppercase mb-3">
