@@ -29,12 +29,6 @@ const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => (
 
     render={data => (
       <>
-        <link 
-          rel="stylesheet" 
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-          crossOrigin="anonymous"
-        />
         <Header siteTitle={data.site.siteMetadata.title} />
         <div className="container" id="content">
           <h1>{pageTitle}</h1>

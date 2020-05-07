@@ -1,4 +1,5 @@
 import React from "react"
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { Card, CardBody, CardText, CardTitle, Form, FormGroup, Input } from "reactstrap"
 import { graphql, StaticQuery, Link } from "gatsby"
 import Image from "gatsby-image"
@@ -20,7 +21,7 @@ const Sidebar = ({ author, authorFluid }) => (
                                     href={author.facebook} 
                                     target="_blank" rel="noopener noreferrer" 
                                     className="facebook">
-                                        <i className="fab fa-facebook-f fa-lg"></i>
+                                        <p className="fab fa-facebook-f fa-lg"><FaFacebookF /></p>
                                 </a>
                             </li>
                             <li>
@@ -28,8 +29,8 @@ const Sidebar = ({ author, authorFluid }) => (
                                     href={author.linkedin} 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
-                                    lassName="linkedin">
-                                        <i className="fab fa-linkedin fa-lg"></i>
+                                    className="linkedin">
+                                        <p className="fab fa-linkedin fa-lg"><FaLinkedinIn /></p>
                                 </a>
                             </li>
                         </ul>

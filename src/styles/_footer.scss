@@ -9,11 +9,12 @@
 
     ul.social-links-list {
       li {
-        margin-right: 25px;
         display: inline-block;
 
         a {
           color: $dark-gray;
+          font-size: 30px;
+          padding: 0 1.5em 0 1.5em; 
 
           &.instagram:hover {
             color: #e95950;
